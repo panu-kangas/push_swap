@@ -60,6 +60,6 @@ void	sort_block_of_100(int *a, int *b, int *num_order, int count);
 void	rotate_to_num(int *a, int num, int i);
 void	set_temp(int *temp, int *num_order, int count);
 void	sort_remain_big(int *a, int *b, int *num_order, int remain);
-void	divide_block_of_100(int *a, int *b, int *num_order, int block_size);
+void	divide_100(int *a, int *b, int *num_order, int block_size);
 
 #endif

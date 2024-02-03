@@ -33,12 +33,12 @@ void	sort_remain_big(int *a, int *b, int *num_order, int remain)
 		return ;
 	set_temp_remain(temp_order, num_order, remain);
 	block_size = temp_order[0] / 8;
-	divide_block_of_100(a, b, temp_order, block_size);
+	divide_100(a, b, temp_order, block_size);
 	while (a[a[0]] >= temp_order[1] && a[a[0]] <= temp_order[temp_order[0]])
 		rra(a);
 	remain = temp_order[0] % 8;
 	while (b[0] < temp_order[0])
-		sort_a_to_b(a, b, temp_order);
+		sort_a_to_b(a, b, temp_order); // sort_stacks
 	rotate_b(b);
 	while (remain-- > 0)
 		pa(a, b);

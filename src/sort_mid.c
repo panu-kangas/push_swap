@@ -57,13 +57,13 @@ void	divide_to_blocks(int *a, int *b, int *num_order, int block_size)
 	while (--count > 0)
 	{
 		i = 0;
-		check_last_num(a, num_order, block_size, count);
+		check_last_num(a, num_order, block_size, count); // optimation
 		while (i < (block_size * 2))
 		{
 			if (check_block_small(a[1], block_size, count, num_order) == 1)
 			{
 				pb(a, b);
-				check_for_rr(a, b, count, num_order);
+				check_for_rr(a, b, count, num_order); // optimation
 				i++;
 			}
 			else if (check_block_big(a[1], block_size, count, num_order) == 1)

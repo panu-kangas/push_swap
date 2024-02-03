@@ -61,7 +61,7 @@ void	search_for_next(int *a, int block_size, int count, int *num_order)
 	}
 }
 
-void	divide_block_of_100(int *a, int *b, int *num_order, int block_size)
+void	divide_100(int *a, int *b, int *num_order, int block_size)
 {
 	int	count;
 	int	i;
@@ -94,14 +94,14 @@ void	sort_block_of_100(int *a, int *b, int *num_order, int count)
 	int	temp_order[101];
 	int	remain;
 
-	set_temp(temp_order, num_order, count);
+	set_temp(temp_order, num_order, count); // mid_big_utils
 	block_size = temp_order[0] / 8;
-	divide_block_of_100(a, b, temp_order, block_size);
+	divide_100(a, b, temp_order, block_size);
 	while (a[a[0]] >= temp_order[1] && a[a[0]] <= temp_order[100])
 		rra(a);
 	remain = block_size % 8;
 	while (b[0] < 100)
-		sort_a_to_b(a, b, temp_order);
+		sort_a_to_b(a, b, temp_order); // sort_stacks
 	rotate_b(b);
 	while (remain-- > 0)
 		pa(a, b);
