@@ -18,19 +18,19 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = check_input.c operations_1.c operations_2.c operations_3.c push_swap_utils.c \
-	  push_swap.c sort_stacks.c sort_mid.c optimations.c sort_big.c \
-	  sort_b_to_a.c sort_block_of_100.c sort_remain_big.c sort_utils.c mid_big_utils.c
+SRC = src/check_input.c src/operations_1.c src/operations_2.c src/operations_3.c src/push_swap_utils.c \
+	src/push_swap_main.c src/sort_stacks.c src/sort_mid.c src/optimations.c src/sort_big.c \
+	src/sort_b_to_a.c src/sort_block_of_100.c src/sort_remain_big.c src/sort_utils.c src/mid_big_utils.c
 
 OBJ = $(SRC:.c=.o)
 
-BSRC = bonus/checker_bonus.c bonus/input_bonus.c bonus/utils_bonus.c \
+BSRC = bonus/checker_main_bonus.c bonus/input_bonus.c bonus/utils_bonus.c \
 	   bonus/do_operations_bonus.c bonus/execute_operations_bonus.c \
 	   bonus/operations_1_bonus.c bonus/operations_2_bonus.c bonus/operations_3_bonus.c
 
 BOBJ = $(BSRC:.c=.o)
 
-LIBFT = ./libft/libft.a
+LIBFT = libft/libft.a
 
 .PHONY: all re clean fclean
 
@@ -45,12 +45,12 @@ $(BNAME): $(BOBJ) $(LIBFT)
 	$(CC) $(CFLAGS) $(BOBJ) $(LIBFT) -o $(BNAME)	
 
 $(LIBFT):
-	make all -C ./libft/.
+	make all -C libft/.
 
 clean:
 	rm -f $(OBJ)
 	rm -f $(BOBJ)
-	make clean -C ./libft/.
+	make clean -C libft/.
 
 fclean: clean
 	rm -f $(NAME)

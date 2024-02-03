@@ -15,7 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include "./libft/libft.h"
+# include "../libft/libft.h"
 
 void	sa(int *a);
 void	sb(int *b);
