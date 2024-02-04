@@ -13,7 +13,7 @@ Stack A is filled with random numbers, Stack B is empty.
 ## Rules:
 
 - Numbers are given to the program as command line arguments.
-- Numbers can be given in two formats: one number per argument ```./push_swap 1 2 3```
+- Numbers can be given in two formats: one number per argument (```./push_swap 1 2 3```)
 - Numbers have to fit in an int variable.
 - No duplicates allowed
 
