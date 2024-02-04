@@ -17,9 +17,9 @@ The push_swap program is supposed to analyze the numbers in Stack A and produce 
 ## General rules of Hive (that affect the code):
 
 - Hive students must follow a "Norm" when it comes to writing code. Norm determines certain rules for code layout. Two examples from the Norm:
-  --> One function can only have a maximum of 25 lines of code.
-  --> One .c file can only have up to 5 functions.
-    Because of these rules I have made some "not so convenient" tricks with my syntax and program flow.
+- --> One function can only have a maximum of 25 lines of code.
+- --> One .c file can only have up to 5 functions.
+- Because of these rules I have made some "not so convenient" tricks with my syntax and program flow.
 - Almost all of the regular C library functions are forbidden (printf, strlen etc).
   --> This is why my code utilizes Libft-library which is written by me. It consists of my own versions of these must-have functions (ft_printf, ft_strlen etc)
 
