@@ -36,7 +36,7 @@ The push_swap program is supposed to analyze the numbers in Stack A and produce 
 You are allowed to use only these instructions/operations to sort the Stack A numbers:
 
 - sa (swap a): Swap the first 2 elements of Stack A. Do nothing if there is only one or no elements.
-- sb (swap b): Swap the first 2 elements at the top of Stack B. Do nothing if there is only one or no elements.
+- sb (swap b): Swap the first 2 elements of Stack B. Do nothing if there is only one or no elements.
 - ss: Do sa and sb at the same time.
 
 - pa (push to a): Take the first element of Stack B and put it to the first position of Stack A (moving the former first number of A to second position of Aetc).
