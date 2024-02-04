@@ -44,8 +44,8 @@ You are allowed to use only these instructions/operations to sort the Stack A nu
 - pb (push to b): Take the first element of Stack A and put it to the first position of Stack B (moving the former first number of B to second position of B etc).
   Do nothing if A is empty.
 
-- ra (rotate a): Move "forward" all elements of Stack A by 1 (former second becomes first, former third becomes second etc). The first element becomes the last one.
-- rb (rotate b): Move "forward" all elements of Stack B by 1 (former second becomes first, former third becomes second etc). The first element becomes the last one.
+- ra (rotate a): Move "forwards" all elements of Stack A by 1 (former second becomes first, former third becomes second etc). The first element becomes the last one.
+- rb (rotate b): Move "forwards" all elements of Stack B by 1 (former second becomes first, former third becomes second etc). The first element becomes the last one.
 - rr: Do ra and rb at the same time.
 
 - rra (reverse rotate a): Move "backwards" all elements of Stack A by 1 (former first becomes second, former second becomes third etc).
