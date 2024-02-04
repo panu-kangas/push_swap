@@ -39,7 +39,7 @@ You are allowed to use only these instructions/operations to sort the Stack A nu
 - sb (swap b): Swap the first 2 elements of Stack B. Do nothing if there is only one or no elements.
 - ss: Do sa and sb at the same time.
 
-- pa (push to a): Take the first element of Stack B and put it to the first position of Stack A (moving the former first number of A to second position of Aetc).
+- pa (push to a): Take the first element of Stack B and put it to the first position of Stack A (moving the former first number of A to the second position of A etc).
   Do nothing if B is empty.
 - pb (push to b): Take the first element of Stack A and put it to the first position of Stack B (moving the former first number of B to second position of B etc).
   Do nothing if A is empty.
