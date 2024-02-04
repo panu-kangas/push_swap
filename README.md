@@ -7,12 +7,11 @@ Assignment provided by HIVE Helsinki coding school.
 
 The main idea of push_swap assignment is quite simple: you have to write a program that arranges random numbers (integers) to an ascending order using a certain set of rules and instructions.
 
-Initially you have to stacks: Stack A and Stack B.
+Initially you have two stacks: Stack A and Stack B.
 Stack A is filled with random numbers, Stack B is empty.
-In the end, if all went as it should, Stack A should have all the numbers in ascending order and Stack B should be empty.
+In the end, if all went as it should, Stack A should have all the numbers in an ascending order and Stack B should be empty.
 
-Your program is supposed to analyze the numbers in Stack A and produce a list of instructions/operations (listed below) to sort the numbers of Stack A.
-This process needs to be optimized so that the program finds "the least amount of instructions needed".
+The push_swap program is supposed to analyze the numbers in Stack A and produce the smallest possible list of instructions/operations (listed below) to sort the numbers of Stack A.
 
 
 ## General rules of Hive (that affect the code):
