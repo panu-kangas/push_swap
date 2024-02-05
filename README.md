@@ -99,14 +99,14 @@ If push_swap program can do the sorting of Stack A within these limits, the prog
 
 ### General rules of Hive (that affect the code) 📘
 
-1️⃣ Hive students must follow a "Norm" when it comes to writing code. Norm determines certain rules for code layout. Two examples from the Norm:
+1️⃣ Hive students must follow a "Norm" when it comes to writing code. Norm determines certain rules for code layout. Two examples from the Norm:  
   --> One function can only have a maximum of 25 lines of code.  
-  --> One .c file can only have up to 5 functions.
+  --> One .c file can only have up to 5 functions.  
   
   Because of these rules I have made some "not so convenient" tricks with my code implementation (to avoid the 25 line limit). Sorry about that 🙈
-  Also, some of my functions are placed a bit "unlogically", because of the 5 function per file -rule. I made some small comments in the code to make program flow clearer.
+  Also, some of my functions are placed a bit "unlogically", because of the 5 function per file -rule. I made some small comments in the code to make program flow a bit more clear.
   
-2️⃣ Almost all of the regular C library functions are forbidden (printf, strlen etc).
+2️⃣ Almost all of the regular C library functions are forbidden (printf, strlen etc).  
   --> This is why my code utilizes Libft-library which is written by me. It consists of my own versions of these must-have functions (ft_printf, ft_strlen etc)  
 
 <br/>
@@ -141,7 +141,7 @@ Most of the times I would just break down the Stack A numbers into smaller segme
 For example:  
 
 A stack of 100 numbers is quite easy to break down into segments of 12 numbers.  
-So after this operation, 12 biggest numbers of the original stack are right next to each other, then after that the next 12 biggest numbers in a segment etc.
+So after this operation, 12 biggest numbers of the original stack are right next to each other (in a segment), then after that the next 12 biggest numbers in a separate segment etc.
 
 <br/>
 
@@ -171,7 +171,7 @@ I made my algorith behave a bit differently depending on the size of the initial
 
 🔢🔢🔢🔢 **321--> (sort_big)**
 
-Yea... this was a bit difficult to do with my approach 😆  
+Yeah... this was a bit difficult to do with my approach 😆  
 But this is what happened in a nutshell:
 
 - First divide the Stack A numbers into x amoount of segments that have a size of 100 numbers (with 500 numbers we have 5 segments). We divide the segments by moving them one at a time into Stack B.
@@ -181,4 +181,17 @@ But this is what happened in a nutshell:
 - We continue this until no segments are left. There might also be a sort the "reminder" (modulus) set of numbers at the bottom of Stack A. We sort that in the end.
 
 This final sort_big algo was a bit too difficult to implement. I mean, it is not nice and neat, and has maybe too many steps along the way to be easily followed...  
-But it did the job, so I'm happy 😆
+But it did the job, so I'm happy 😁
+
+
+### The bonus 🏆
+
+The bonus part's source files can be found in the "bonus" repository.  
+That one is quite straight forward, go ahead an see for yourself ☺️  
+
+The easiest way to test it is using a pipe:  
+./push_swap SOME_NUMBERS  |  ./checker SOME_NUMBERS  
+
+For example:  
+```./push_swap 5 4 3 2 1 | ./checker 5 4 3 2 1```  
+The program then prints "OK" if the push_swap program works, and "KO" if it doesn't 😁
