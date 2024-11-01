@@ -8,8 +8,8 @@ Project is written in C-language on macOS.
 
 # How to use? 🤔
 
-NOTE:
-This project works definitely on macOS and most likely on Linux (haven't tested that yet).
+NOTE:  
+This project works definitely on macOS and most likely on Linux (haven't tested that yet).  
 It will not work on Windows, sadly 🙁
 
 
