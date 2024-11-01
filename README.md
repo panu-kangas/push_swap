@@ -8,7 +8,12 @@ Project is written in C-language on macOS.
 
 # How to use? 🤔
 
-Git clone the push_swap repository.  
+NOTE:
+This project works definitely on macOS and most likely on Linux (haven't tested that yet).
+It will not work on Windows, sadly 🙁
+
+
+Git clone the push_swap repository and ```cd``` into it.  
 Do ```make all``` in the directory to compile my push_swap program.  
 Do ```make bonus```in the directory to compile my checker program.  
 
@@ -41,24 +46,16 @@ If not, it should print "KO".  If input was incorrect, it shold print "Error".
 
 <br/>
 
-Confused? 😁  
-Yeah, I was too, when this project started.  
-But no worries, read on and things will become clearer.
-
-<br/>
-
 ### Operations to do the sorting 📑
 
 Push_swap can only use these operations to sort the numbers in Stack A:
 
-↕️ SA (swap a): Swap the first 2 elements of Stack A. Do nothing if there is only one or no elements.  
-↕️ SB (swap b): Swap the first 2 elements of Stack B. Do nothing if there is only one or no elements.  
+↕️ SA (swap a): Swap the first 2 elements of Stack A.
+↕️ SB (swap b): Swap the first 2 elements of Stack B.
 ↕️↕️ SS (swap both): Do sa and sb at the same time. This is counted as one move.  
 
 ➡️ PA (push to a): Take the first element of Stack B and put it as the first element of Stack A (moving the former first element of A to the second position of A etc).
-  Do nothing if B is empty.  
 ➡️ PB (push to b): Take the first element of Stack A and put it as the first element of Stack B (moving the former first element of B to second position of B etc).
-  Do nothing if A is empty.  
 
 ⤴️ RA (rotate a): Move "forwards" all elements of Stack A by 1 (former second element becomes first, former third element becomes second etc). The first element of A becomes the last element of A.  
 ⤴️ RB (rotate b): Move "forwards" all elements of Stack B by 1 (former second element becomes first, former third element becomes second etc). The first element of B becomes the last element of B.  
@@ -97,41 +94,14 @@ If push_swap program can do the sorting of Stack A within these limits, the prog
 
 <br/>
 
-### General rules of Hive (that affect the code) 📘
-
-1️⃣ Hive students must follow a "Norm" when it comes to writing code. Norm determines certain rules for code layout. Two examples from the Norm:  
-  --> One function can only have a maximum of 25 lines of code.  
-  --> One .c file can only have up to 5 functions.  
-  
-  Because of these rules I have made some "not so convenient" tricks with my code implementation (to avoid the 25 line limit). Sorry about that 🙈
-  Also, some of my functions are placed a bit "unlogically", because of the 5 function per file -rule. I made some small comments in the code to make program flow a bit more clear.
-  
-2️⃣ Almost all of the regular C library functions are forbidden (printf, strlen etc).  
-  --> This is why my code utilizes Libft-library which is written by me. It consists of my own versions of these must-have functions (ft_printf, ft_strlen etc)  
-
-<br/>
-
-# How to solve this thing then ❓❗
-
-I feel like this is a project that requires more logical problem solving skills than complicated coding tricks. 🤔  
-
-Especially the push_swap program requires mostly if/else comparing of numbers and then executing the operations given accordingly.  
-One has to be careful for the error handling though, because it's easy to miss some kind of unwanted input or forget to free arrays after an error occurs... 😳  
-The bonus part needed a bit more coding knowledge (on how to get the operations from STDIN).
-
-I don't wanna explain the whole logic behind my sorting algorithm, because... well, mostly because I don't wanna write hundreds of lines in this Readme 😁  
-But here are few bullet points about my algo's logic:
-
-<br/>
-
-### What ideas/sorting algorithms I used? 🧠
+# What ideas/sorting algorithms I used? 🧠
 
 1️⃣ I used an idea that follows the principles of <ins>insertion sort</ins> to do the actual final sorting.
   An example:  
   
   If I had a number X as the first element of Stack B, and I wanted to sort that into Stack A, I'd used my *sort_b_to_a* -function.
-  *Sort_b_to_a* first finds the correct position for the number X, then rotates stack A so that when i use PA operation, the number X is moved to it's correct position.
-  "Correct position" in this case means (if Stack A numbers are in order) a position where the number after X is greater than X and the number before X is smaller than X.
+  *Sort_b_to_a* first finds the correct position for the number X in stack A, then rotates stack A so that when I push the number X on top of stack A it is moved to it's correct position.
+  "Correct position" in this case means a position where the number after X is greater than X and the number before X is smaller than X.
   This is because eventually we want the numbers of Stack A to be in ascending order.  
   
   If we just loop this idea and in the end rotate Stack A so that the smallest number is in the first position, we should get us a nicely sorted stack 😎
@@ -164,9 +134,9 @@ I made my algorith behave a bit differently depending on the size of the initial
 🔢🔢🔢 **21-320 (sort_mid)**
 
 - First divide the Stack A numbers into 8 segments (divide and conquer) by moving them two segments at a time into Stack B.
-- Because I use integer math, division to 8 segments might leave me with a modulus value.
+- Division to 8 segments might leave me with a modulus value.
   --> If so, the "modulus amount of numbers" is left in Stack A. Now I sort them using sort_small logic.
-- Then I use insertion sort to sort all the numbers from Stack B to Stack A. Because numbers are now quite close to their final position, this happenss quite efficiently.
+- Then I use insertion sort to sort all the numbers from Stack B to Stack A. Because numbers are now close to their final position, this happenss quite efficiently.
 - Finally rotate Stack A to get the smallest number on top.
 
 🔢🔢🔢🔢 **321--> (sort_big)**
@@ -183,11 +153,9 @@ But this is what happened in a nutshell:
 This final sort_big algo was a bit too difficult to implement. I mean, it is not nice and neat, and has maybe too many steps along the way to be easily followed...  
 But it did the job, so I'm happy 😁
 
-
 ### The bonus 🏆
 
 The bonus part's source files can be found in the "bonus" repository.  
-That one is quite straight forward, go ahead an see for yourself ☺️  
 
 The easiest way to test it is using a pipe:  
 ./push_swap SOME_NUMBERS  |  ./checker SOME_NUMBERS  
