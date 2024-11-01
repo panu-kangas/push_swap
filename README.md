@@ -50,12 +50,12 @@ If not, it should print "KO".  If input was incorrect, it shold print "Error".
 
 Push_swap can only use these operations to sort the numbers in Stack A:
 
-↕️ SA (swap a): Swap the first 2 elements of Stack A.
-↕️ SB (swap b): Swap the first 2 elements of Stack B.
-↕️↕️ SS (swap both): Do sa and sb at the same time. This is counted as one move.  
+↕️ SA (swap a): Swap the first 2 elements of Stack A.  
+↕️ SB (swap b): Swap the first 2 elements of Stack B.  
+↕️↕️ SS (swap both): Do sa and sb at the same time. This is counted as one move.   
 
-➡️ PA (push to a): Take the first element of Stack B and put it as the first element of Stack A (moving the former first element of A to the second position of A etc).
-➡️ PB (push to b): Take the first element of Stack A and put it as the first element of Stack B (moving the former first element of B to second position of B etc).
+➡️ PA (push to a): Take the first element of Stack B and put it as the first element of Stack A (moving the former first element of A to the second position of A etc).  
+➡️ PB (push to b): Take the first element of Stack A and put it as the first element of Stack B (moving the former first element of B to second position of B etc).  
 
 ⤴️ RA (rotate a): Move "forwards" all elements of Stack A by 1 (former second element becomes first, former third element becomes second etc). The first element of A becomes the last element of A.  
 ⤴️ RB (rotate b): Move "forwards" all elements of Stack B by 1 (former second element becomes first, former third element becomes second etc). The first element of B becomes the last element of B.  
